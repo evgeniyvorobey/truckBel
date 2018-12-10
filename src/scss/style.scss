@@ -308,27 +308,27 @@ header  ul{
     font-weight: bold;
     margin: 0;
   }
-  .custom-button{
-    height: 50px;
-    background: #1a42a0;
-    color: #ffffff;
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    outline: transparent;
-    font-size: 12px;
-    font-weight: bold;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: .1s linear;
-    &:hover{
-      background: #ffffff;
-      color: #1a42a0;
-      border: 1px solid #1a42a0;
+}
+.custom-button{
+  height: 50px;
+  background: #1a42a0;
+  color: #ffffff;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  outline: transparent;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: .1s linear;
+  &:hover{
+    background: #ffffff;
+    color: #1a42a0;
+    border: 1px solid #1a42a0;
 
-    }
   }
 }
 .catalog-main{
