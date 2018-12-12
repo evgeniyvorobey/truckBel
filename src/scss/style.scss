@@ -473,11 +473,12 @@ header ul{
 .new-arrivals-item{
   display: flex;
   flex-direction: column;
-  width: 260px;
+  width: 300px;
   height: 365px;
   border-radius: 2px;
   box-shadow: 0px 1px 15px -4px #728198;
   margin-bottom: 10px;
+  overflow: hidden;
   .new-arrivals-img{
     position: relative;
     padding: 10px;
@@ -733,7 +734,7 @@ header ul{
   select{
     padding-left: 10px;
     height: 100%;
-    width: 110%;
+    width: 125%;
     border: none;
     background: #ffffff;
     outline: transparent;
@@ -741,7 +742,16 @@ header ul{
   }
 }
 .checkbox-container{
+  display: flex;
+  align-items: center;
   font-size: 12px;
+  input{
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  label{
+    cursor: pointer;
+  }
 }
 .our-department{
   margin: 20px 0;
@@ -1080,7 +1090,13 @@ aside {
     justify-content: space-between;
     width: 74%;
   }
-
+  .display{
+    display: flex;
+    align-items: center;
+    img{
+      cursor: pointer;
+    }
+  }
 
 
 
