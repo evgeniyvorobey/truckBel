@@ -826,6 +826,9 @@ aside {
     box-sizing: border-box;
   }
 }
+.aside-active{
+  top: 50px;
+}
 .list-category-item{
   display: block;
   height: 0;
@@ -849,12 +852,21 @@ aside {
     }
   }
 }
-
 .active .list-category-item{
   height: auto;
   padding: 10px 0;
 }
-
+.container-list-all-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.button-show-category{
+  width: 100%;
+  button{
+    width: 100%;
+  }
+}
 
 
 
@@ -1039,7 +1051,7 @@ aside {
     width: 75%;
   }
   .select-container{
-    width: 300px;
+    width: 60%;
   }
   .our-department .department{
     width: 24%;
@@ -1051,9 +1063,16 @@ aside {
     position: relative;
     left: 0;
     padding: 0;
+    margin: 40px 0;
     transform: translate(0);
     width: 24%;
     height: 50%;
+    .list-category-name{
+      padding: 15px 20px;
+    }
+  }
+  .button-show-category{
+    display: none;
   }
   .container-list-all-item{
     display: flex;

@@ -15,7 +15,10 @@ var modalLoginOff = () => document.querySelector('.login').parentNode.classList.
 shadow.addEventListener('click', () => {
     shadowOff();
     dropDownListOff();
-    hamburger.classList.remove('active')
+    hamburger.classList.remove('active');
+    if (document.querySelector('aside')){
+        asideOff();
+    }
 })
 
 
@@ -50,6 +53,18 @@ var closeAllCategory = () => {
     document.querySelectorAll('.list-category').forEach(item => {
         item.classList.remove('active')
     })
+}
+
+var asideOn = () => document.querySelector('aside').classList.add('aside-active');
+var asideOff = () => document.querySelector('aside').classList.remove('aside-active');
+
+if (document.querySelector('.button-show-category')) {
+    document.querySelector('.button-show-category button').onclick = function () {
+        modalLoginOff();
+        shadowOn();
+        asideOn();
+
+    }
 }
 
 if(document.querySelector('.list-category-name')){
