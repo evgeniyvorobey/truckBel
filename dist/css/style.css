@@ -961,7 +961,9 @@ header ul {
     height: 100%;
     width: 125%;
     border: none;
+    border-radius: 0;
     background: #ffffff;
+    -webkit-appearance: none;
     outline: transparent;
     cursor: pointer; }
 
