@@ -1188,6 +1188,9 @@ aside {
     border-bottom: 1px solid #1a42a0;
     transform: translate(0, -50%) rotate(-45deg); }
 
+.article-container {
+  padding-top: 40px; }
+
 @media (min-width: 768px) {
   .center-block {
     overflow: hidden;
@@ -1369,7 +1372,9 @@ aside {
   .news-list-item .news-list-item-img {
     width: 300px; }
   .news-list-item-main {
-    width: 100%; } }
+    width: 100%; }
+  header .center-block {
+    overflow: visible; } }
 
 @media (min-width: 1024px) {
   .center-block {
