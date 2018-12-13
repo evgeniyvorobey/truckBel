@@ -243,6 +243,7 @@ header ul{
     padding: 0 0 0 10px;
     background: #103283;
     border: none;
+    border-radius: 0;
     color: #ffffff;
     font-size: 12px;
     &::placeholder{
@@ -796,7 +797,7 @@ header ul{
   }
 }
 aside {
-  padding: 20px;
+  border-radius: 2px;
   position: fixed;
   top: -100%;
   left: 50%;
@@ -812,10 +813,19 @@ aside {
   box-sizing: border-box;
   box-shadow: 0px 1px 15px -4px #728198;
   transition: .2s linear;
+  h3{
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    background: #1a42a0;
+    color: #ffffff;
+  }
+
   .list-all-category{
     margin: 0;
   }
   nav{
+    padding: 20px;
     box-sizing: border-box;
     border-radius: 2px;
   }
@@ -1079,6 +1089,12 @@ aside {
     height: 50%;
     .list-category-name{
       padding: 15px 20px;
+    }
+    h3{
+      display: none;
+    }
+    nav{
+      padding: 0;
     }
   }
   .button-show-category{

@@ -28,6 +28,9 @@ hamburger.addEventListener('click', () => {
         dropDownListOff();
         hamburger.classList.remove('active')
     } else {
+        if(document.querySelector('aside')) {
+            asideOff();
+        }
         modalLoginOff();
         hamburger.classList.add('active')
         dropDownListOn();
