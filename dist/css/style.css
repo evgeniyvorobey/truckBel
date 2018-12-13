@@ -321,6 +321,9 @@ template {
 .p40 {
   padding: 40px 0; }
 
+.p20 {
+  padding: 20px 0; }
+
 body {
   background: #ffffff;
   font-family: 'Montserrat', sans-serif;
@@ -795,7 +798,8 @@ header ul {
   overflow: hidden; }
   .company-item-slider .owl-item {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
   .company-item-slider .owl-nav {
     display: none; }
 
@@ -813,13 +817,14 @@ header ul {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px; }
-  .news-item .news-date {
-    font-size: 12px;
-    font-weight: 500;
-    margin-bottom: 15px; }
   .news-item .part-of-the-news {
     font-size: 14px;
     font-weight: 500; }
+
+.news-date {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 15px; }
 
 .box-shadow {
   box-shadow: 0px 1px 15px -4px #728198; }
@@ -1099,11 +1104,97 @@ aside {
   .button-show-category button {
     width: 100%; }
 
+.news-list-item {
+  display: flex;
+  flex-direction: column; }
+  .news-list-item .news-list-item-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 0 auto; }
+  .news-list-item .news-list-item-main {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px; }
+    .news-list-item .news-list-item-main .article-link {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      color: #181818; }
+    .news-list-item .news-list-item-main p {
+      font-size: 14px;
+      font-weight: 500; }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center !important; }
+  .pagination ul {
+    display: flex;
+    padding: 0;
+    list-style: none; }
+    .pagination ul li {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      transition: .1s linear;
+      box-sizing: border-box; }
+      .pagination ul li a {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+    .pagination ul .page-number {
+      border-radius: 4px;
+      border: 1px solid #1a42a0; }
+      .pagination ul .page-number a {
+        color: #1a42a0; }
+      .pagination ul .page-number:hover {
+        background: #1a42a0; }
+        .pagination ul .page-number:hover a {
+          color: #ffffff; }
+    .pagination ul .active {
+      background: #1a42a0; }
+      .pagination ul .active a {
+        color: #ffffff !important; }
+  .pagination .previous a {
+    position: relative; }
+  .pagination .previous:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    right: 0;
+    border-left: 1px solid #1a42a0;
+    border-top: 1px solid #1a42a0;
+    transform: translate(0, -50%) rotate(-45deg); }
+  .pagination .next a {
+    position: relative; }
+  .pagination .next:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 0;
+    border-right: 1px solid #1a42a0;
+    border-bottom: 1px solid #1a42a0;
+    transform: translate(0, -50%) rotate(-45deg); }
+
 @media (min-width: 768px) {
   .center-block {
+    overflow: hidden;
     width: 768px;
     margin: 0 auto;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    justify-content: normal; }
   .center-blockm40 {
     width: 768px; }
   .logo {
@@ -1170,15 +1261,25 @@ aside {
     .top-container h3 {
       font-size: 24px; }
   .catalog-main {
-    justify-content: space-between; }
+    justify-content: normal;
+    margin-left: -6px;
+    margin-right: -6px; }
   .container-for-new-arrivals {
-    justify-content: space-between; }
+    justify-content: normal;
+    margin-left: -4px;
+    margin-right: -4px; }
   .new-arrivals-item {
-    width: 180px; }
+    width: 180px;
+    margin: 10px 7px; }
   .conteiner-for-news {
-    justify-content: space-between; }
+    justify-content: normal;
+    margin-left: -8px;
+    margin-right: -10px; }
+  .catalog-main-tem {
+    margin: 15px 5px; }
   .news-item {
-    width: 180px; }
+    width: 180px;
+    margin: 0 8px 20px; }
   .some-content {
     flex-direction: row; }
     .some-content .text-block {
@@ -1230,12 +1331,13 @@ aside {
   .select-container {
     width: 60%; }
   .our-department .department {
-    width: 24%; }
+    width: 24%;
+    margin: 10px 3px; }
   .main-container {
     justify-content: space-between; }
   aside {
     position: relative;
-    left: 0;
+    left: 4px;
     padding: 0;
     margin: 40px 0;
     transform: translate(0);
@@ -1259,7 +1361,15 @@ aside {
     display: flex;
     align-items: center; }
     .display img {
-      cursor: pointer; } }
+      cursor: pointer; }
+  .container-list-all-item .new-arrivals-item {
+    margin: 0px 4px 10px; }
+  .news-list-item {
+    flex-direction: row; }
+  .news-list-item .news-list-item-img {
+    width: 300px; }
+  .news-list-item-main {
+    width: 100%; } }
 
 @media (min-width: 1024px) {
   .center-block {
@@ -1277,9 +1387,21 @@ aside {
     font-size: 11px;
     padding: 0 5px; }
   .new-arrivals-item {
-    width: 240px; }
+    width: 240px;
+    margin: 10px 9px; }
   .news-item {
-    width: 240px; } }
+    width: 240px;
+    margin: 0 10px 20px; }
+  .catalog-main-tem {
+    margin: 15px 4px; }
+  .catalog-main {
+    justify-content: normal;
+    margin-left: -4px;
+    margin-right: -4px; }
+  .container-list-all-item .new-arrivals-item {
+    margin: 0px 6px 10px; }
+  .our-department .department {
+    margin: 10px 5px; } }
 
 @media (min-width: 1200px) {
   .center-block {
@@ -1289,7 +1411,8 @@ aside {
   .header-top-left {
     width: 70%; }
   .new-arrivals-item {
-    width: 255px; }
+    width: 255px;
+    margin: 10px 27px; }
   .news-item {
     width: 255px; }
   .some-content .text-block {
@@ -1297,7 +1420,25 @@ aside {
   .item-main-content .item-img {
     width: 40%; }
   .item-info {
-    margin-left: 50px; } }
+    margin-left: 50px; }
+  .catalog-main {
+    justify-content: normal;
+    margin-left: -29px;
+    margin-right: -11px; }
+  .catalog-main-tem {
+    margin: 15px 30px; }
+  .container-for-new-arrivals {
+    justify-content: normal;
+    margin-left: -16px;
+    margin-right: -20px; }
+  .conteiner-for-news {
+    margin-left: -29px;
+    margin-right: -31px; }
+  .news-item {
+    margin: 0 30px 20px; }
+  .our-department .department {
+    width: 24%;
+    margin: 10px 6px; } }
 
 @media (max-width: 768px) {
   .hide-before-768 {
