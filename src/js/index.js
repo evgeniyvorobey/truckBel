@@ -85,10 +85,21 @@ if(document.querySelector('.list-category-name')){
 }
 
 
+window.onscroll = function() {
+    var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    if(scrolled >= 120) {
+        document.querySelector('.header-bottom-block').classList.add('scroll');
+        document.querySelector('main').style = 'padding-top: 50px;';
+        document.querySelector('.search-input').setAttribute('placeholder','Введите серийный номер или VIN')
+        document.querySelectorAll('.header-bottom-item')[document.querySelectorAll('.header-bottom-item').length-1].style.display = 'none';
+    } else{
+        document.querySelector('.header-bottom-block').classList.remove('scroll');
+        document.querySelector('.search-input').setAttribute('placeholder','Поиск')
+        document.querySelectorAll('.header-bottom-item')[document.querySelectorAll('.header-bottom-item').length-1].style.display = 'inherit';
+        document.querySelector('main').style = 'padding-top: 0;';
 
-
-
-
+    }
+}
 
 
 

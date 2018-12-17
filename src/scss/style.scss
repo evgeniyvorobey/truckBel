@@ -167,6 +167,7 @@ header ul{
 .header-bottom-block{
   position: relative;
   background-color: #1a42a0;
+  transition: .2s linear;
 }
 .header-bottom-nav{
   position: absolute;
@@ -1011,6 +1012,16 @@ aside {
 .article-container{
   padding-top: 40px;
 }
+.brand-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.brand-item{
+  margin: 10px auto;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
 
 
 
@@ -1065,6 +1076,7 @@ aside {
     align-items: center;
     justify-content: space-between;
     height: 50px;
+    box-sizing: border-box;
   }
   .header-top-left, .header-top-right{
     margin: 0;
@@ -1275,6 +1287,22 @@ aside {
   header .center-block{
     overflow: visible;
   }
+  .brand-list{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .scroll{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    .form-search{
+      position: fixed;
+      right: 20%;
+      width: 80%;
+    }
+  }
+
 
 
 }
@@ -1330,6 +1358,9 @@ aside {
   .our-department .department {
     margin: 10px 5px;
   }
+  .brand-list{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 @media (min-width: 1200px) {
   .center-block{
@@ -1383,6 +1414,9 @@ aside {
   .our-department .department {
     width: 24%;
     margin: 10px 6px;
+  }
+  .brand-list{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
