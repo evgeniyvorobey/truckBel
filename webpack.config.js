@@ -65,13 +65,13 @@ module.exports = {
               ident: 'postcss',
               sourceMap: true,
               plugins: () => [
-                // require('cssnano')({
-                //   preset: ['default', {
-                //     discardComments: {
-                //       removeAll: true,
-                //     },
-                //   }]
-                // })
+                require('cssnano')({
+                  preset: ['default', {
+                    discardComments: {
+                      removeAll: true,
+                    },
+                  }]
+                })
               ]
             }
           },
