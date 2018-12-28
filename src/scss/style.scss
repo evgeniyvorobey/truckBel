@@ -189,7 +189,13 @@ header ul{
     font-size: 10px;
   }
 }
+.item-with-dropdown{
+  flex-direction: column
+}
 .header-bottom-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
@@ -197,6 +203,7 @@ header ul{
   margin: 5px 0;
   cursor: pointer;
   a,.cabinet{
+    padding: 5px;
     padding: 0 5px;
     display: flex;
     align-items: center;
@@ -204,35 +211,37 @@ header ul{
     span{
       margin-left: 5px;
     }
+    // &:hover{
+    //   background: #ffffff;
+    //   color: #1a42a0;
+    // }
   }
 }
 .show{
   top: -5px;
 }
-
-.cabinet-modal{
+.cabinet-modal, .client-modal{
   width: 100%;
   height: 0;
   overflow: hidden;
   background: #1a42a0;
   padding: 0;
-  margin: 5px 0;
   box-sizing: border-box;
   transition: .1s linear;
-  .cabinet-modal-link{
+  .cabinet-modal-link, .client-modal-link{
     color: #181818;
     padding: 5px;
 
   }
 }
 
-.active .cabinet-modal{
+.active .cabinet-modal, .active .client-modal{
   height: auto;
   background: #ffffff;
   padding: 15px;
   margin: 5px 0;
-  .cabinet-modal-link{
-    color: #181818;
+  .cabinet-modal-link, .client-modal-link{
+    color: #1a42a0;
     padding: 5px;
 
   }
@@ -593,7 +602,7 @@ header ul{
   .price{
     position: absolute;
     top: 48%;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     span{
       font-size: 12px;
@@ -650,6 +659,83 @@ header ul{
       }
     }
   }
+}
+.calalogListSprite{
+  .new-arrivals-item{
+    flex-direction: row;
+    width: 100%;
+    height: 180px;
+    margin: 10px 0;
+    .new-arrivals-img{
+      display: none;
+    }
+    .new-arrivals-description{
+      padding: 0 15px;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: initial;
+      box-sizing: border-box;
+      .container-description{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        .name{
+          width: 100%;
+          padding-top: 25px;
+          position: initial;
+        }
+        .category{
+          padding: 10px 0 0 0;
+          position: initial;
+        }
+        .vendor-code{
+          padding-top: 10px;
+          position: initial;
+        }
+        .brand{
+          padding-top: 10px;
+          position: initial;
+        }
+        .available{
+          position: absolute;
+          top: initial;
+          bottom: 25px;
+        }
+      }
+      .container-for-button{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        width: 30%;
+        height: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
+        .price{
+          top: 25px;
+        }
+        .available{
+          display: none;
+        }
+        .container-for-by-button{
+          padding: 0 5px;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          top: initial;
+          bottom: 25px;
+          button{
+            margin: 0 3px;
+
+            padding: 0 3px;
+          }
+        }
+      }
+    }
+  }
+
 }
 .catalogListImgSprite{
   .new-arrivals-item{
@@ -926,6 +1012,9 @@ footer #map{
   justify-content: space-between;
   width: 100%;
 }
+
+//------------
+
 .select-container{
   font-size: 12px;
   height: 45px;
@@ -945,6 +1034,44 @@ footer #map{
     cursor: pointer;
   }
 }
+
+//--------------
+
+
+.select-container .select2-container--krajee .select2-selection--single .select2-selection__placeholder{
+  color: black;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 2.4;
+
+}
+.select-container .select2-container--krajee .select2-selection--single{
+  height: 45px;
+}
+.select-container .select2-container--krajee .select2-selection{
+  background-color: #fff;
+  color: #555555;
+  font-size: 14px;
+  outline: 0;
+  border: 1px solid #999999;
+  border-radius: 2px;
+}
+.select-container .select-container .select2-container--krajee .select2-selection--single {
+    padding-left: 10px;
+    line-height: 2.5;
+    height: 45px;
+    width: 125%;
+    border: none;
+    border-radius: 0;
+    background: #ffffff;
+    -webkit-appearance: none;
+    outline: transparent;
+    cursor: pointer; }
+.select-container .select2-container--krajee .select2-selection--single .select2-selection__arrow{
+  height: 45px;
+  display: none;
+}
+
 .checkbox-container{
   display: flex;
   align-items: center;
@@ -1250,15 +1377,15 @@ aside {
 
 
 @media (min-width: 768px) {
-  .center-block{
+  .center-block {
     overflow: hidden;
     width: 768px;
     margin: 0 auto;
     box-sizing: border-box;
-    justify-content: normal;
+    justify-content: normal; 
   }
-  .center-blockm40{
-    width: 768px;
+  .center-blockm40, .container {
+    width: 768px !important; 
   }
 
   .logo{
@@ -1319,6 +1446,7 @@ aside {
   }
   .container-for-top-sider{
     width: 74%;
+    height: 277px;
     overflow: hidden;
   }
   .container{
@@ -1353,6 +1481,15 @@ aside {
       span{
         text-transform: capitalize;
       }
+    }
+  }
+  .header-bottom-item>a,.header-bottom-item>span{
+    cursor: pointer;
+    padding: 8px 3px !important;
+    border-radius: 2px;
+    &:hover{
+      background: #ffffff;
+      color: #1a42a0;
     }
   }
   .top-sider {
@@ -1410,35 +1547,36 @@ aside {
   .footer ul{
     width: 23%;
   }
-  .cabinet-modal{
+  .cabinet-modal, .client-modal{
     position: absolute;
     width: 130px;
     margin: 0;
     top: 100%;
-    right: 0;
+    left: 0;
     box-sizing: border-box;
     background: #ffffff;
     transition: .1s linear;
-    .cabinet-modal-link{
+    .cabinet-modal-link, .client-modal-link{
       color: #181818;
       padding: 5px;
 
     }
   }
-
-  .active .cabinet-modal{
+  .active .cabinet-modal, .active .client-modal{
     top: 100%;
-    right: 0;
+    left: 0;
     height: auto;
     background: #ffffff;
     margin: 0;
     border-radius: 2px;
     box-shadow: 0px 1px 15px -4px #728198;
-    .cabinet-modal-link{
-      color: #181818;
+    .cabinet-modal-link, .client-modal-link{
+      color: #1a42a0;
+      font-size: 12px;
       padding: 5px;
       &:hover{
-        background: rgba(215, 229, 242, 0.33);
+        background: rgb(24, 63, 166);
+        color: #ffffff;
       }
     }
   }
@@ -1534,8 +1672,35 @@ aside {
   .catalogListImgSprite .new-arrivals-item .new-arrivals-description .container-for-button .container-for-by-button{
     flex-wrap: nowrap;
   }
-
-
+  .catalogListImgSprite .new-arrivals-item .new-arrivals-img{
+    width: 25%;
+  }
+  .new-arrivals-description .price{
+    font-size: 24px;
+  }
+  .catalogListImgSprite .new-arrivals-item .new-arrivals-description{
+    padding: 0 0 0 15px;
+    width: 75%;
+    .container-description{
+      width: 60%;
+    }
+    .container-for-button{
+      padding: 0 15px;
+      width: 40%;
+      .container-for-by-button{
+        padding: 0 15px;
+      }
+    }
+  }
+  .calalogListSprite .new-arrivals-item .new-arrivals-description{
+    padding: 0 20px;
+  }
+  .client-modal,.cabinet-modal {
+    width: max-content;
+    a{
+      justify-content: flex-start;
+    }
+  }
 
 }
 
@@ -1546,11 +1711,11 @@ aside {
 
 
 @media (min-width: 1024px) {
-  .center-block{
-    width: 1024px;
+  .center-block, .container {
+    width: 1024px !important; 
   }
-  .center-blockm40{
-    width: 1024px;
+  .center-blockm40 {
+    width: 1024px !important; 
   }
   .header-top-left li, .header-top-right li{
     padding: 0;
@@ -1599,14 +1764,17 @@ aside {
   .scroll .form-search {
     right: 25%;
     width: 75%;
-}
+  }
+  .container-for-top-sider {
+      height: 369px;
+  }
 }
 @media (min-width: 1200px) {
-  .center-block{
-    width: 1200px;
+  .center-block, .container {
+    width: 1200px !important; 
   }
-  .center-blockm40{
-    width: 1200px;
+  .center-blockm40 {
+    width: 1200px !important; 
   }
   .header-top-left{
     width: 70%;
@@ -1656,6 +1824,9 @@ aside {
   }
   .brand-list{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .container-for-top-sider {
+    height: 432px;
   }
 }
 

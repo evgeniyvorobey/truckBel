@@ -88,7 +88,18 @@
             <li class="header-bottom-item"><a href="">О компании</a></li>
             <li class="header-bottom-item"><a href="">Сеть магазинов</a></li>
             <li class="header-bottom-item"><a href="">Бренды</a></li>
-            <li class="header-bottom-item"><a href="">Партнеры</a></li>
+            <li class="header-bottom-item item-with-dropdown">
+              <a class="client" href="" onclick="return false">Клиентам</a>
+              <div class="client-modal">
+                <ul class="client-modal-list">
+                  <li class="client-modal-list"><a href="" class="client-modal-link">Стать клиентом</a></li>
+                  <li class="client-modal-list"><a href="" class="client-modal-link">Рекламация товара</a></li>
+                  <li class="client-modal-list"><a href="" class="client-modal-link">Возврат товара</a></li>
+                  <li class="client-modal-list"><a href="" class="client-modal-link">Для оптовых клиентов</a></li>
+                  <li class="client-modal-list"><a href="" class="client-modal-link">Доставка</a></li>
+                </ul>
+              </div>
+            </li>
             <li class="header-bottom-item"><a href="">Контакты</a></li>
             <li class="header-bottom-item"><a href="">сто</a></li>
             <li class="header-bottom-item">
@@ -99,7 +110,7 @@
                 </button>
               </form>
             </li>
-            <li class="header-bottom-item">
+            <li class="header-bottom-item item-with-dropdown">
               <span class="cabinet" href="">
                 <img class="" src="img/usericon.png" alt="">
                 <span>Личный кабинет</span>
@@ -158,8 +169,9 @@
             </select>
           </div>
           <div class="display">
-            <img class="small-icon" src="img/display.png" alt="">
-            <img class="small-icon" src="img/line-display.png" alt="">
+            <div view="calalogListSprite" class="content-view"></div>
+            <div view="catalogListImgSprite" class="content-view current-view"></div>
+            <div view="catalogImgSprite" class="content-view"></div>
           </div>
           <div class="checkbox-container">
             <input id="in-stock" type="checkbox">
@@ -355,7 +367,7 @@
           </ul>
         </nav>
       </aside>
-      <div class="container-list-all-item p40">
+      <div class="catalogListImgSprite container-list-all-item p40">
         <div class="new-arrivals-item">
           <div class="new-arrivals-img">
             <a href=""><img src="img/newArr1.png" alt=""></a>
@@ -364,9 +376,22 @@
             </span>
           </div>
           <div class="new-arrivals-description">
-            <a class="name" href="">TE 630 Фильтр масляный</a>
-            <a href="#" class="category">Масляные фильтры</a>
-            <span class="vendor-code">Арикул: TE630</span>
+            <div class="container-description">
+              <a class="name" href="">TE 630 Фильтр масляный</a>
+              <a href="#" class="category">Масляные фильтры</a>
+              <span class="vendor-code">Арикул: TE630</span>
+              <span class="brand">Бренд: <span>Bosh</span></span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+            </div>
+            <div class="container-for-button">
+              <span class="price">57,14 <span>byn</span> </span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+              <div class="container-for-by-button">
+                <button>+1</button>
+                <button>+10</button>
+                <button>Купить</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="new-arrivals-item">
@@ -377,9 +402,22 @@
             </span>
           </div>
           <div class="new-arrivals-description">
-            <a class="name" href="">TE 630 Фильтр масляный</a>
-            <a href="#" class="category">Масляные фильтры</a>
-            <span class="vendor-code">Арикул: TE630</span>
+            <div class="container-description">
+              <a class="name" href="">TE 630 Фильтр масляный</a>
+              <a href="#" class="category">Масляные фильтры</a>
+              <span class="vendor-code">Арикул: TE630</span>
+              <span class="brand">Бренд: <span>Bosh</span></span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+            </div>
+            <div class="container-for-button">
+              <span class="price">57,14 <span>byn</span> </span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+              <div class="container-for-by-button">
+                <button>+1</button>
+                <button>+10</button>
+                <button>Купить</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="new-arrivals-item">
@@ -390,9 +428,22 @@
             </span>
           </div>
           <div class="new-arrivals-description">
-            <a class="name" href="">TE 630 Фильтр масляный</a>
-            <a href="#" class="category">Масляные фильтры</a>
-            <span class="vendor-code">Арикул: TE630</span>
+            <div class="container-description">
+              <a class="name" href="">TE 630 Фильтр масляный</a>
+              <a href="#" class="category">Масляные фильтры</a>
+              <span class="vendor-code">Арикул: TE630</span>
+              <span class="brand">Бренд: <span>Bosh</span></span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+            </div>
+            <div class="container-for-button">
+              <span class="price">57,14 <span>byn</span> </span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+              <div class="container-for-by-button">
+                <button>+1</button>
+                <button>+10</button>
+                <button>Купить</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="new-arrivals-item">
@@ -403,9 +454,22 @@
             </span>
           </div>
           <div class="new-arrivals-description">
-            <a class="name" href="">TE 630 Фильтр масляный</a>
-            <a href="#" class="category">Масляные фильтры</a>
-            <span class="vendor-code">Арикул: TE630</span>
+            <div class="container-description">
+              <a class="name" href="">TE 630 Фильтр масляный</a>
+              <a href="#" class="category">Масляные фильтры</a>
+              <span class="vendor-code">Арикул: TE630</span>
+              <span class="brand">Бренд: <span>Bosh</span></span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+            </div>
+            <div class="container-for-button">
+              <span class="price">57,14 <span>byn</span> </span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+              <div class="container-for-by-button">
+                <button>+1</button>
+                <button>+10</button>
+                <button>Купить</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="new-arrivals-item">
@@ -416,9 +480,22 @@
             </span>
           </div>
           <div class="new-arrivals-description">
-            <a class="name" href="">TE 630 Фильтр масляный</a>
-            <a href="#" class="category">Масляные фильтры</a>
-            <span class="vendor-code">Арикул: TE630</span>
+            <div class="container-description">
+              <a class="name" href="">TE 630 Фильтр масляный</a>
+              <a href="#" class="category">Масляные фильтры</a>
+              <span class="vendor-code">Арикул: TE630</span>
+              <span class="brand">Бренд: <span>Bosh</span></span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+            </div>
+            <div class="container-for-button">
+              <span class="price">57,14 <span>byn</span> </span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+              <div class="container-for-by-button">
+                <button>+1</button>
+                <button>+10</button>
+                <button>Купить</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="new-arrivals-item">
@@ -429,9 +506,48 @@
             </span>
           </div>
           <div class="new-arrivals-description">
-            <a class="name" href="">TE 630 Фильтр масляный</a>
-            <a href="#" class="category">Масляные фильтры</a>
-            <span class="vendor-code">Арикул: TE630</span>
+            <div class="container-description">
+              <a class="name" href="">TE 630 Фильтр масляный</a>
+              <a href="#" class="category">Масляные фильтры</a>
+              <span class="vendor-code">Арикул: TE630</span>
+              <span class="brand">Бренд: <span>Bosh</span></span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+            </div>
+            <div class="container-for-button">
+              <span class="price">57,14 <span>byn</span> </span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+              <div class="container-for-by-button">
+                <button>+1</button>
+                <button>+10</button>
+                <button>Купить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-arrivals-item">
+          <div class="new-arrivals-img">
+            <a href=""><img src="img/newArr1.png" alt=""></a>
+            <span class="sticker">
+              Новинка
+            </span>
+          </div>
+          <div class="new-arrivals-description">
+            <div class="container-description">
+              <a class="name" href="">TE 630 Фильтр масляный</a>
+              <a href="#" class="category">Масляные фильтры</a>
+              <span class="vendor-code">Арикул: TE630</span>
+              <span class="brand">Бренд: <span>Bosh</span></span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+            </div>
+            <div class="container-for-button">
+              <span class="price">57,14 <span>byn</span> </span>
+              <span class="available"><img src="img/available.png" alt=""> Доступно <span>12</span>шт.</span>
+              <div class="container-for-by-button">
+                <button>+1</button>
+                <button>+10</button>
+                <button>Купить</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -665,7 +781,7 @@
     </div>
 
   </footer>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"> -->
   </script>
   <script src="js/additions/jQuery.js"></script>
   <script src="js/additions/owl.carousel.min.js"></script>
