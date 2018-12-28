@@ -1,0 +1,31 @@
+<%= _.template(require('./../includes/header.html'))(data) %>
+<main>
+    <div class="item-container center-block">
+        <div class="header-item">
+            <div class="container-item">
+                <h3>Стать клиентом</h3>
+                <div class="breadcrumbs">
+                    <a href="">Главная</a>
+                    <span class="next"></span>
+                    <a href="">Клиентам</a>
+                    <span class="next"></span>
+                    <a href="">Стать клиентом</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="becomeaclient-container item-container center-block">
+        <div class="becomeaclient-main">
+            <h4>Стать клиентом очень просто</h4>
+            <p><img src="img/cartImg.png" alt="">Выбрать один из 26 магазинов</p>
+            <p><img src="img/starImg.png" alt="">Получить индивидуальные условия работы</p>
+            <p><img src="img/listImg.png" alt="">Заключить договор</p>
+            <button class="button-will-contact">Скачать типовой договор</button>
+            <a href="./becomeaclientform.html" class="custom-button">Получить доступ on-line к складу с более 30 000 товаров</a>
+        </div>
+        <div class="becomeaclient-img">
+            <img class="response-img" src="img/becomeaclientimg.png" alt="">
+        </div>
+    </div>
+</main>
+<%= _.template(require('./../includes/footer.html'))(data) %>

@@ -98,6 +98,9 @@ if (document.querySelector('.list-category-name')) {
 }
 
 window.onscroll = function () {
+    modalLoginOff();
+            modalCabinetOff();
+            modalClientOff();
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
     if (window.innerWidth >= 768) {
         var heightContent = document.querySelector('.header-bottom-block').offsetHeight;
