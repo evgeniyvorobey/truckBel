@@ -516,7 +516,28 @@ header ul{
     font-size: 16px;
   }
 }
-
+.about-company-page{
+  .catalog-main-tem{
+    flex-direction: column;
+    padding: 20px;
+    height: 250px;
+    box-sizing: border-box;
+    align-items: baseline;
+    div{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 50%;
+      img{
+        margin: 0;
+      }
+    }
+  }
+  span{
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+}
 .container-for-new-arrivals{
   display: flex;
   flex-wrap: wrap;
@@ -631,6 +652,14 @@ header ul{
     top: 75%;
     padding: 0 20px;
     box-sizing: border-box;
+    .buy{
+      width: 100%;
+      padding: 0;
+      form{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
     button{
       font-weight: bold;
       font-size: 12px;
@@ -1382,12 +1411,34 @@ aside {
 .becomeaclient-img{
   margin-top: 22px;
 }
-.becomeaclient-container, .becomeaclient-form-container{
+.becomeaclient-container, .becomeaclient-form-container, .return-block{
   padding-top: 0;
 }
 .becomeaclient-form-main{
   max-width: 320px;
 
+}
+.return-block{
+  p{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+}
+.round-number{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #1a42a0;
+  color: #ffffff;
+  // font-size: 14px;
+  font-weight: 600;
+  margin-right: 7px;
 }
 .becomeaclient-form-container{
   p{
@@ -1422,7 +1473,43 @@ aside {
     margin-top: 15px;
   }
 }
-
+.working-hours{
+  display: flex;
+  img{
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+  }
+  p{
+    padding: 0;
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 500;
+    span{
+      font-weight: bold;
+    }
+  }
+}
+.medium12{
+  font-size:12px;
+  font-weight: 500;
+  a{
+    text-decoration: none;
+    font-size:12px;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+  }
+}
+.contact-page {
+  padding: 0 10px;
+  .news-name{
+    font-size: 12px;
+  }
+  span{
+    margin-bottom: 8px !important;
+  }
+}
 
 
 
@@ -1746,8 +1833,8 @@ aside {
     left: 0;
     .form-search{
       position: fixed;
-      right: 29%;
-      width: 71%;
+      right: 33%;
+      width: 67%;
     }
   }
   .catalogListImgSprite .new-arrivals-item .new-arrivals-description .container-for-button .container-for-by-button{
@@ -1785,6 +1872,11 @@ aside {
       width: 60%;
       padding: 0 0 0 10px;
       box-sizing: border-box;
+    }
+  }
+  .contact-page{
+    .news-item{
+      margin: 0 5px 20px;
     }
   }
 
@@ -1848,11 +1940,16 @@ aside {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
   .scroll .form-search {
-    right: 25%;
-    width: 75%;
+    right: 28%;
+    width: 72%;
   }
   .container-for-top-sider {
       height: 369px;
+  }
+  .contact-page{
+    .news-item{
+      margin: 0 7px 20px;
+    }
   }
 }
 @media (min-width: 1200px) {
@@ -1913,6 +2010,11 @@ aside {
   }
   .container-for-top-sider {
     height: 432px;
+  }
+  .contact-page{
+    .news-item{
+      margin: 0 27px 20px;
+    }
   }
 }
 

@@ -9,8 +9,8 @@ var dropDownListOn = () => dropDownNav.classList.add('show');
 dropDownListOff = () => dropDownNav.classList.remove('show');
 
 var modalLoginOff = () => document.querySelector('.login').parentNode.classList.remove('active');
-    modalCabinetOff = () => document.querySelector('.cabinet').parentNode.classList.remove('active');
-    modalClientOff = () => document.querySelector('.client').parentNode.classList.remove('active');
+modalCabinetOff = () => document.querySelector('.cabinet').parentNode.classList.remove('active');
+modalClientOff = () => document.querySelector('.client').parentNode.classList.remove('active');
 
 
 shadow.addEventListener('click', () => {
@@ -50,7 +50,7 @@ if (document.querySelector('.login')) {
 // }
 
 if (document.querySelector('.client')) {
-    document.querySelector('.client').onclick = function (e){
+    document.querySelector('.client').onclick = function (e) {
         e.preventDefault();
         modalLoginOff();
         modalCabinetOff();
@@ -99,8 +99,8 @@ if (document.querySelector('.list-category-name')) {
 
 window.onscroll = function () {
     modalLoginOff();
-            modalCabinetOff();
-            modalClientOff();
+    modalCabinetOff();
+    modalClientOff();
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
     if (window.innerWidth >= 768) {
         var heightContent = document.querySelector('.header-bottom-block').offsetHeight;
