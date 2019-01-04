@@ -550,7 +550,7 @@ header ul{
   height: 520px;
   border-radius: 2px;
   box-shadow: 0px 1px 15px -4px #728198;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
   overflow: hidden;
   .new-arrivals-img{
     position: relative;
@@ -904,13 +904,12 @@ header ul{
   .img-block{
     position: relative;
     overflow: hidden;
-    height: 400px;
+    height: 300px;
     width: 100%;
     img{
       position: absolute;
       right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      bottom: 0;
     }
   }
 }
@@ -943,6 +942,13 @@ footer #map{
     font-size: 12px;
     font-weight: 500;
   }
+}
+.footer-list-item{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 4px 0;
 }
 .footer-list-social{
   margin: 10px 0;
@@ -985,6 +991,10 @@ footer #map{
     font-weight: bold;
     margin: 0 0 10px 0;
   }
+}
+.our-department-header{
+  padding: 40px 0;
+  flex-wrap: wrap;
 }
 .item-main-content{
   .item-img{
@@ -1043,12 +1053,20 @@ footer #map{
 //------------
 
 .select-container{
+  position: relative;
   font-size: 12px;
   height: 45px;
   width: 130px;
   border: 1px solid #999999;
   border-radius: 2px;
   overflow: hidden;
+  &:after{
+    content: url(../img/triangle.png);
+    position: absolute;
+    top: 48%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
   select{
     padding-left: 10px;
     height: 100%;
@@ -1059,6 +1077,11 @@ footer #map{
     -webkit-appearance:none;
     outline: transparent;
     cursor: pointer;
+  }
+}
+.our-department-header {
+  .select-container{
+    width: 145px;
   }
 }
 
@@ -1113,13 +1136,13 @@ footer #map{
 }
 .our-department{
   margin: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   .department{
-    width: 48%;
-    margin: 10px 0;
-    padding: 10px;
+    width: 95%;
+    margin: 10px auto;
+    padding: 20px 10px;
     box-shadow: 0px 1px 15px -4px #728198;
     box-sizing: border-box;
     a{
@@ -1128,18 +1151,37 @@ footer #map{
       font-size: 12px;
       font-weight: 500;
     }
+    .department-city-block{
+      margin-bottom: 10px
+    }
+    .department-city{
+      display: block;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 12px 0 6px 0;
+    }
     .department-address{
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
+    }
+    .department-work{
+      .department-work-time{
+        font-size: 12px;
+        font-weight: 400;
+        display: block;
+        margin-bottom: 6px;
+        .department-work-day{
+          font-weight: bold;
+        }
+      }
     }
     .department-phone{
       display: flex;
       flex-direction: column;
       span{
-        display: flex;
-        align-items: center;
-        padding: 5px;
+        display: block;
+        margin-bottom: 3px;
         a{
           font-weight: 400;
         }
@@ -1181,7 +1223,7 @@ footer #map{
 aside {
   border-radius: 2px;
   position: fixed;
-  top: -100%;
+  top: -250%;
   left: 50%;
   transform: translate(-50%, 0);
   width: 300px;
@@ -1259,9 +1301,7 @@ aside {
   padding: 10px 0;
 }
 .container-list-all-item{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  width: 100%;
 }
 .button-show-category{
   width: 100%;
@@ -1509,6 +1549,26 @@ aside {
   span{
     margin-bottom: 8px !important;
   }
+}
+.our-departments-h3{
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.pagination .active{
+  background-color: #1a42a0;
+  border-color: #1a42a0;
+}
+body #scroller{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: transparent url(/images/up-round.png) no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: none;
 }
 
 
@@ -1769,12 +1829,20 @@ aside {
   .search{
     width: 75%;
   }
+  .our-department-header{
+    .search{
+      width: 68%;
+      justify-content: flex-end;
+      .select-container{
+        margin-left: 10px;
+      }
+    }
+  }
   .select-container{
     width: 60%;
   }
-  .our-department .department{
-    width: 24%;
-    margin: 10px 3px;
+  .our-department{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .main-container{
     justify-content: space-between;
@@ -1804,8 +1872,8 @@ aside {
   .container-list-all-item{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     width: 74%;
+    justify-content: flex-start;
   }
   .container-list-all-item .new-arrivals-item{
     margin: 0px 4px 10px;
@@ -1878,6 +1946,15 @@ aside {
     .news-item{
       margin: 0 5px 20px;
     }
+  }
+  .our-department-header {
+
+    .select-container{
+      width: 240px;
+    }
+  }
+  .some-content .img-block{
+    height: 400px;
   }
 
 
@@ -2001,10 +2078,6 @@ aside {
   .news-item {
     margin: 0 30px 20px;
   }
-  .our-department .department {
-    width: 24%;
-    margin: 10px 4px;
-  }
   .brand-list{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
@@ -2015,6 +2088,9 @@ aside {
     .news-item{
       margin: 0 27px 20px;
     }
+  }
+  .catalogImgSprite .new-arrivals-item:nth-child(3n+2){
+    margin: 0 48px;
   }
 }
 
